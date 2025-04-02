@@ -1,9 +1,6 @@
 from fastapi import APIRouter, Depends, Response, HTTPException
 from sqlalchemy.orm import Session
 from sqlalchemy.exc import IntegrityError, OperationalError, DataError, TimeoutError
-
-from book_service.controllers import db_update_book
-from models import Book
 from schema import BookSchema, BookUpdateSchema
 from database_conn import db_session
 
