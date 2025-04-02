@@ -107,7 +107,7 @@ def update_book(book_details: BookUpdateSchema, response: Response,  book_id: st
 
 
 # Update book count
-@book_router.patch("/book/{book_id}/borrow")
+@book_router.patch("/books/{book_id}/borrow")
 def borrow_book(book_id: str, response: Response, db : Session = Depends(get_db)):
 
     try:
